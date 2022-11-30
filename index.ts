@@ -1,5 +1,14 @@
+// @ts-nocheck
 import {MersenneTwister19937, Random} from 'random-js';
 import SimplexNoise from 'simplex-noise';
+
+export type Particle = {
+  x: Number;
+  y: Number;
+  vx: Number;
+  vy: Number;
+  line: any[];
+};
 
 const getRandom = (randomSeed) => {
   const seed = randomSeed || MersenneTwister19937.autoSeed();
@@ -50,7 +59,7 @@ export const generateParticles = ({
   const random = getRandom(seed);
   const bounds = getBounds(width, height, margin);
   const {minWidth, maxWidth, minHeight, maxHeight} = bounds;
-  let particles = [];
+  let particles: Particle[] = [];
 
   // Generate some particles with a random position
   for (let i = 0; i < count; i++) {
@@ -123,10 +132,10 @@ export const generateField = ({
   });
 
   particles?.forEach((particle) => {
-    particle.line = particle.line.filter((particle) => {
-      return isInBound(particle[0], particle[1], width, height, margin);
+    particle.line = particle.line.filter((p) => {
+      return isInBound(p[0], p[1], width, height, margin);
     });
   });
 
-  return particles;
+  return particles as Particle[];
 };

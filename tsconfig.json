@@ -1,0 +1,11 @@
+{
+  "include": ["index.js"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "allowJs": true,
+    "strict": false,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationDir": "dist"
+  }
+}

@@ -15,6 +15,7 @@ Resources for learning more about flow fields and noise:
 
 - [Usage](#usage)
 - [API Reference](#api)
+- [TypeScript](#typescript)
 - [Contributing](#contributing)
 
 ## Usage
@@ -27,6 +28,12 @@ npm
 npm i @romellogoodman/flow-field
 ```
 
+yarn
+
+```
+yarn add @romellogoodman/flow-field
+```
+
 unpkg
 
 ```
@@ -35,10 +42,35 @@ unpkg
 
 ### Use
 
+#### JavaScript
+
 ```js
 import {generateField} from '@romellogoodman/flow-field';
 
 const field = generateField({count: 100, height: 1000, width: 1000});
+```
+
+#### TypeScript
+
+```ts
+import {generateField} from '@romellogoodman/flow-field';
+import type {Particle} from '@romellogoodman/flow-field';
+
+const field = generateField({count: 100, height: 1000, width: 1000});
+```
+
+## TypeScript
+
+`Particle` is available for using in your sketches, with `Line` typings to come.
+
+```tsx
+type Particle = {
+  x: Number;
+  y: Number;
+  vx: Number;
+  vy: Number;
+  line: any[];
+};
 ```
 
 ## API

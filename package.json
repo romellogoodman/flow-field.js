@@ -2,12 +2,17 @@
   "name": "@romellogoodman/flow-field",
   "version": "0.0.4",
   "description": "A library for generating flow fields.",
+  "types": "dist/index.d.ts",
+  "source": "index.ts",
+  "main": "dist/flow-field.js",
+  "module": "dist/flow-field.module.js",
+  "unpkg": "dist/flow-field.umd.js",
   "scripts": {
     "dev": "microbundle watch",
     "build": "microbundle",
     "lint": "eslint .",
     "test": "echo \"tests\"",
-    "prepublish": "npm run lint && npm test && npm run build"
+    "prepublish": "npm run li nt && npm test && npm run build"
   },
   "dependencies": {
     "random-js": "^2.1.0",
@@ -24,12 +29,9 @@
     "jest": "^26.6.3",
     "lint-staged": "^10.5.4",
     "microbundle": "^0.13.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "typescript": "^4.9.3"
   },
-  "source": "index.js",
-  "main": "dist/flow-field.js",
-  "module": "dist/flow-field.module.js",
-  "unpkg": "dist/flow-field.umd.js",
   "author": "Romello Goodman",
   "license": "MIT",
   "repository": {
