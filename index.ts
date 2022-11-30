@@ -132,8 +132,8 @@ export const generateField = ({
   });
 
   particles?.forEach((particle) => {
-    particle.line = particle.line.filter((particle) => {
-      return isInBound(particle[0], particle[1], width, height, margin);
+    particle.line = particle.line.filter((p) => {
+      return isInBound(p[0], p[1], width, height, margin);
     });
   });
 
