@@ -27,6 +27,12 @@ npm
 npm i @romellogoodman/flow-field
 ```
 
+yarn
+
+```
+yarn add @romellogoodman/flow-field
+```
+
 unpkg
 
 ```
@@ -37,6 +43,13 @@ unpkg
 
 ```js
 import {generateField} from '@romellogoodman/flow-field';
+
+const field = generateField({count: 100, height: 1000, width: 1000});
+```
+
+```ts
+import {generateField} from '@romellogoodman/flow-field';
+import type {Particle} from '@romellogoodman/flow-field';
 
 const field = generateField({count: 100, height: 1000, width: 1000});
 ```
